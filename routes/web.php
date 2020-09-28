@@ -12,3 +12,4 @@
 */
 
 Route::get('/', 'HomeController@index');
+Route::get('/{cat}/{product_id}', 'ProductController@show')->name('showProduct');
