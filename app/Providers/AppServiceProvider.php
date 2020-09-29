@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        $categories = \App\Category::orderBy('id')->get(); // $categories pass to all views
+        View::share([
+            'categories' =>$categories
+        ]);
     }
 }
