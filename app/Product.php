@@ -11,4 +11,9 @@ class Product extends Model
     public function images(){
         return $this->hasMany('App\ProductImage');
     }
+    
+    public function category(){
+        return $this->belongsTo('App\Category', 'category_id');
+    }
 }
+
