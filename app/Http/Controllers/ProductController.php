@@ -21,8 +21,12 @@ class ProductController extends Controller
         ]);
     }
     
-    public function showCategory(){
+    public function showCategory($cat_alias){
         
-        
+        $cat = \App\Category::where('alias', $cat_alias)->first();
+       
+        return view('categories.index',[
+            'cat'=>$cat
+        ]);
     }
 }
