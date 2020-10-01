@@ -52,7 +52,7 @@
                     @endphp
 
 
-                    <div class="details_image_large"><img src="/images/{{$image}}" alt="{{$item->title}}"><div class="product_extra product_new"><a href="categories.html">New</a></div></div>
+                    <div class="details_image_large"><img src="/images/{{$image}}" alt="{{$item->title}}"><div class="product_extra product_new"><a href="{{route('showCategory', $item->category->alias)}}">{{$item->category->title}}</a></div></div>
                     <div class="details_image_thumbnails d-flex flex-row align-items-start justify-content-between">
                         @if($image == '2307.png')
                         
