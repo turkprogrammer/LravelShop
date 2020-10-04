@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
-Route::get('/{cat}', 'ProductController@showCategory')->name('showCategory');
-Route::get('/{cat}/{product_id}', 'ProductController@show')->name('showProduct');
+Route::get('/', 'HomeController@index')->name('home');
+Route::get('category/{cat}', 'ProductController@showCategory')->name('showCategory');
+Route::get('category/{cat}/{product_id}', 'ProductController@show')->name('showProduct');
+Route::get('/cart', 'CartController@index')->name('cartIndex');
+Route::get('/add-to-cart', 'CartController@addToCart')->name('addToCart');
+

@@ -6,6 +6,11 @@
 @endsection
 @section('custom_js')
 <script src="/js/product.js"></script>  
+<script>
+    $(document).ready(function(){
+        
+    })
+</script>
 @endsection
 @section('content')
 
